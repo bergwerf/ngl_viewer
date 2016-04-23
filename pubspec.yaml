@@ -1,0 +1,9 @@
+name:         ngl_viewer
+version:      0.0.1
+author:       Herman Bergwerf <hermanbergwerf@gmail.com>
+description:  NGL viewer
+homepage:     https://github.com/molview/ngl-viewer
+environment:
+  sdk:        '>=1.8.0 <2.0.0'
+dependencies:
+  js:         ^0.6.0
