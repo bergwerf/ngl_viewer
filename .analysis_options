@@ -7,7 +7,12 @@ linter:
   - hash_and_equals
 
   # Style rules
-  - always_declare_return_types
+
+  # Disabled because a Dart Analyzer bug causes a conflict between
+  # always_declare_return_types and avoid_return_types_on_setters on setters.
+  #
+  #- always_declare_return_types
+
   - avoid_init_to_null
   - avoid_return_types_on_setters
   - camel_case_types
