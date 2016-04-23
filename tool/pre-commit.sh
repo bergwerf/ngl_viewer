@@ -4,5 +4,4 @@
 # Use of this source code is governed by an AGPL-3.0-style license
 # that can be found in the LICENSE file.
 
-molviewfmt -c 'Herman Bergwerf' -l 'AGPL-3.0'
-make check
+molviewfmt -c 'Herman Bergwerf' -l 'AGPL-3.0
