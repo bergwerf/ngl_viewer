@@ -7,8 +7,13 @@ part of ngl_viewer;
 /// NGL Stage
 @JS()
 class Stage {
+  /// Constructor
   external Stage([String eid, StageParams params]);
-  external void loadFile(String path, [LoadFileParams params]);
+
+  /// Loads a file from [path]. Creates a corresponding component and returns a
+  /// [Promise]. The path argument can be a URL string, a [File] object or a
+  /// [Blob] object. The params argument is passed to the [autoLoad] function.
+  external dynamic loadFile(dynamic path, [LoadFileParams params]);
 }
 
 /// Parameters for NGL.Stage
@@ -102,6 +107,7 @@ class RenderQuality {
 @anonymous
 @JS()
 class LoadFileParams {
+  /// Constructor
   external factory LoadFileParams(
       {bool defaultRepresentation,
       String name,
