@@ -11,9 +11,9 @@ class Stage {
   external Stage([String eid, StageParams params]);
 
   /// Loads a file from [path]. Creates a corresponding component and returns a
-  /// [Promise]. The path argument can be a URL string, a [File] object or a
-  /// [Blob] object. The params argument is passed to the [autoLoad] function.
-  external dynamic loadFile(dynamic path, [LoadFileParams params]);
+  /// Promise. The path argument can be a URL string, a File object or a
+  /// Blob object. The params argument is passed to the autoLoa] function.
+  external dynamic loadFile(path, [LoadFileParams params]);
 }
 
 /// Parameters for NGL.Stage
@@ -124,7 +124,7 @@ class LoadFileParams {
   external set defaultRepresentation(bool v);
 
   /// Name given to the loaded components. Useful for methods
-  /// [getComponentsByName], [getRepresentationsByName] and [getAnythingByName].
+  /// getComponentsByName, getRepresentationsByName and getAnythingByName.
   external String get name;
   external set name(String v);
 

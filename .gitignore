@@ -4,17 +4,23 @@
 
 *~
 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
 # KDE directory preferences
 .directory
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
 
-###############
-# OSX.gitignore
-###############
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
-.DS_Store
+#################
+# macOS.gitignore
+#################
+
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -32,6 +38,7 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -47,12 +54,9 @@ Temporary Items
 # See https://www.dartlang.org/tools/private-files.html
 
 # Files and directories created by pub
-.buildlog
+.dart_tool/
 .packages
-.project
-.pub/
 build/
-packages
 
 # Files created by dart2js
 # (Most Dart developers will use pub build to compile Dart, use/modify these

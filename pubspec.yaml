@@ -1,11 +1,14 @@
 name:         ngl_viewer
 version:      0.0.1
-author:       Herman Bergwerf <hermanbergwerf@gmail.com>
 description:  NGL Viewer Dart library
 homepage:     https://github.com/molview/ngl-viewer
 environment:
-  sdk:        '>=1.8.0 <2.0.0'
+  sdk:        '>=2.0.0 <3.0.0'
+
 dependencies:
-  js:         ^0.6.0
+  js: any
+
 dev_dependencies:
-  browser:    ^0.10.0+2
+  build_runner: any
+  build_web_compilers: any
+
