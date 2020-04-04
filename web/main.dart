@@ -13,5 +13,9 @@ Future main() async {
 
   final stage = new ngl.Stage('ngl-viewer', stageSettings);
   final comp = await fut(stage.loadFile('rcsb://1blu', loadFileParams));
-  print(comp.name);
+  for (final r in comp.reprList) {
+    final params = r.repr.getParameters();
+    params.disablePicking = true;
+    r.repr.setParameters(params);
+  }
 }
