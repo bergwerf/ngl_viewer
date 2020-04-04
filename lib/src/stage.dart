@@ -1,26 +1,16 @@
-// Copyright (c) 2016, Herman Bergwerf. All rights reserved.
-// Use of this source code is governed by an AGPL-3.0-style license
-// that can be found in the LICENSE file.
-
 part of ngl_viewer;
 
 /// NGL Stage
 @JS()
 class Stage {
-  /// Constructor
   external Stage([String eid, StageParams params]);
-
-  /// Loads a file from [path]. Creates a corresponding component and returns a
-  /// Promise. The path argument can be a URL string, a File object or a
-  /// Blob object. The params argument is passed to the autoLoa] function.
-  external dynamic loadFile(path, [LoadFileParams params]);
+  external Promise<Component> loadFile(path, [LoadFileParams params]);
 }
 
 /// Parameters for NGL.Stage
 @anonymous
 @JS()
 class StageParams {
-  /// Constructor
   external factory StageParams(
       {bool overwritePreferences: true,
       String theme,
@@ -40,7 +30,6 @@ class StageParams {
       double ambientIntensity});
 
   /// Overwrite localStorage preferences with these preferences.
-  /// True by default (it is false by default in the official NGL release)
   external bool get overwritePreferences;
   external set overwritePreferences(bool v);
 
@@ -96,7 +85,6 @@ class StageParams {
   external set ambientIntensity(double v);
 }
 
-/// Possible values for StageParams.quality
 class RenderQuality {
   static const low = 'low';
   static const medium = 'medium';
@@ -107,7 +95,6 @@ class RenderQuality {
 @anonymous
 @JS()
 class LoadFileParams {
-  /// Constructor
   external factory LoadFileParams(
       {bool defaultRepresentation,
       String name,

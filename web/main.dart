@@ -2,14 +2,16 @@
 // Use of this source code is governed by an AGPL-3.0-style license
 // that can be found in the LICENSE file.
 
+import 'package:ngl_viewer/promise.dart';
 import 'package:ngl_viewer/ngl_viewer.dart' as ngl;
 
-void main() {
+Future main() async {
   ngl.mainScriptFilePath = 'packages/ngl_viewer/ngl.embedded.min.js';
 
   final stageSettings = new ngl.StageParams(quality: ngl.RenderQuality.low);
   final loadFileParams = new ngl.LoadFileParams(defaultRepresentation: true);
 
   final stage = new ngl.Stage('ngl-viewer', stageSettings);
-  stage.loadFile('rcsb://1blu', loadFileParams);
+  final comp = await fut(stage.loadFile('rcsb://1blu', loadFileParams));
+  print(comp.name);
 }
