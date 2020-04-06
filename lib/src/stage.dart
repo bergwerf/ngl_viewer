@@ -5,6 +5,8 @@ part of ngl_viewer;
 class Stage {
   external Stage([String eid, StageParams params]);
   external Promise<Component> loadFile(path, [LoadFileParams params]);
+  external void handleResize();
+  external void removeAllComponents();
 }
 
 /// Parameters for NGL.Stage
@@ -37,11 +39,6 @@ class StageParams {
   external String get theme;
   external set theme(String v);
 
-  /// Render quality
-  ///
-  /// Controls how many vertices are used to render geometries such as cartoons.
-  /// Note that spheres are ray-cased when `EXT_frag_depth` is availabe.
-  /// Use values from [RenderQuality].
   external String get quality;
   external set quality(String v);
 

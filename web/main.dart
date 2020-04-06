@@ -6,13 +6,13 @@ import 'package:ngl_viewer/promise.dart';
 import 'package:ngl_viewer/ngl_viewer.dart' as ngl;
 
 Future main() async {
-  ngl.mainScriptFilePath = 'packages/ngl_viewer/ngl.embedded.min.js';
+  ngl.mainScriptFilePath = 'packages/ngl_viewer/ngl.js';
 
   final stageSettings = new ngl.StageParams(quality: ngl.RenderQuality.low);
   final loadFileParams = new ngl.LoadFileParams(defaultRepresentation: true);
 
   final stage = new ngl.Stage('ngl-viewer', stageSettings);
-  final comp = await fut(stage.loadFile('rcsb://1blu', loadFileParams));
+  final comp = await fut(stage.loadFile('rcsb://4V60', loadFileParams));
   for (final r in comp.reprList) {
     final params = r.repr.getParameters();
     params.disablePicking = true;
