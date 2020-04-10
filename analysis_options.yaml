@@ -56,7 +56,9 @@ linter:
   - avoid_return_types_on_setters
   - avoid_returning_null
   - avoid_returning_this
-  - avoid_setters_without_getters
+
+  # Costs a LOT of extra space in the wrapper.
+  #- avoid_setters_without_getters
 
   # For convenience we might assume a certain type even if it is dynamic.
   #- avoid_types_on_closure_parameters

@@ -4,4 +4,6 @@ part of ngl_viewer;
 class Component {
   external String get name;
   external List<RepresentationElement> get reprList;
+  external void removeAllRepresentations();
+  external dynamic addRepresentation(String type, params);
 }
