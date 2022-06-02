@@ -1,7 +1,7 @@
 name:         ngl_viewer
 version:      0.0.1
 description:  NGL Viewer Dart library
-homepage:     https://github.com/molview/ngl-viewer
+homepage:     https://github.com/molview/ngl_viewer
 environment:
   sdk:        '>=2.1.0 <3.0.0'
 
